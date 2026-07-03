@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI HOT 日报 — 2026年7月3日（周五）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0d1117;--surface:#161b22;--surface-hover:#1c2330;--border:#30363d;
+  --text:#e6edf3;--text-muted:#8b949e;--text-dim:#6e7681;
+  --accent:#58a6ff;--accent2:#bc8cff;--accent3:#3fb950;--accent4:#f0883e;
+  --accent5:#f778ba;--radius:12px;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+/* Hero */
+.hero{
+  background:linear-gradient(135deg,#0d1117 0%,#161b22 50%,#1a1f3a 100%);
+  border-bottom:1px solid var(--border);
+  padding:48px 0 40px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;top:-50%;right:-20%;width:500px;height:500px;
+  background:radial-gradient(circle,rgba(88,166,255,0.08) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero::after{
+  content:"";position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;
+  background:radial-gradient(circle,rgba(188,140,255,0.06) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero-content{position:relative;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(88,166,255,0.1);border:1px solid rgba(88,166,255,0.3);
+  color:var(--accent);padding:4px 14px;border-radius:20px;
+  font-size:13px;font-weight:500;margin-bottom:16px;
+}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent3);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{
+  font-size:32px;font-weight:700;margin-bottom:8px;
+  background:linear-gradient(135deg,#e6edf3 0%,#58a6ff 50%,#bc8cff 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-date{font-size:15px;color:var(--text-muted);margin-bottom:24px}
+.hero-date .window{font-size:13px;color:var(--text-dim);margin-top:4px}
+.hero-stats{display:flex;gap:12px;flex-wrap:wrap}
+.stat-chip{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:12px 20px;
+  display:flex;flex-direction:column;align-items:center;min-width:80px;
+  transition:border-color 0.2s;
+}
+.stat-chip:hover{border-color:var(--accent)}
+.stat-chip.total{
+  background:linear-gradient(135deg,rgba(88,166,255,0.15),rgba(188,140,255,0.1));
+  border-color:rgba(88,166,255,0.4);
+}
+.stat-chip .num{font-size:24px;font-weight:700;color:var(--text)}
+.stat-chip.total .num{color:var(--accent)}
+.stat-chip .label{font-size:12px;color:var(--text-muted);margin-top:2px;text-align:center}
+.stat-chip .dot{width:6px;height:6px;border-radius:50%;display:inline-block;margin-right:4px;vertical-align:middle}
+.dot-c1{background:var(--accent)}.dot-c2{background:var(--accent4)}.dot-c3{background:var(--accent3)}
+.dot-c4{background:var(--accent2)}.dot-c5{background:var(--accent5)}
+
+/* Anchor Nav */
+.anchor-nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:12px 0;
+}
+.anchor-nav-inner{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.anchor-nav a{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 16px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--border);
+  color:var(--text-muted);text-decoration:none;font-size:13px;font-weight:500;
+  transition:all 0.2s;white-space:nowrap;
+}
+.anchor-nav a:hover{background:var(--surface-hover);color:var(--text);border-color:var(--accent)}
+.anchor-nav a .count{
+  background:rgba(255,255,255,0.08);padding:1px 7px;border-radius:10px;
+  font-size:11px;font-weight:600;
+}
+
+/* Sections */
+main{padding:32px 0 48px}
+.section{margin-bottom:48px;scroll-margin-top:70px}
+.section-header{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:20px;padding-bottom:12px;
+  border-bottom:1px solid var(--border);
+}
+.section-icon{
+  width:28px;height:28px;border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:15px;flex-shrink:0;
+}
+.icon-c1{background:rgba(88,166,255,0.15);color:var(--accent)}
+.icon-c2{background:rgba(240,136,62,0.15);color:var(--accent4)}
+.icon-c3{background:rgba(63,185,80,0.15);color:var(--accent3)}
+.icon-c4{background:rgba(188,140,255,0.15);color:var(--accent2)}
+.icon-c5{background:rgba(247,120,186,0.15);color:var(--accent5)}
+.section-header h2{font-size:20px;font-weight:600}
+.section-header .sec-count{
+  font-size:13px;color:var(--text-muted);
+  background:var(--surface);padding:2px 10px;border-radius:10px;border:1px solid var(--border);
+}
+
+/* Card Grid */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(340px,1fr));
+  gap:16px;
+}
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px;
+  display:flex;flex-direction:column;gap:10px;
+  transition:all 0.2s;position:relative;overflow:hidden;
+}
+.card::before{
+  content:"";position:absolute;top:0;left:0;width:3px;height:100%;
+  background:var(--accent);opacity:0;transition:opacity 0.2s;
+}
+.card:hover{background:var(--surface-hover);border-color:rgba(88,166,255,0.4);transform:translateY(-2px)}
+.card:hover::before{opacity:1}
+.card-top{display:flex;align-items:flex-start;gap:10px}
+.card-num{
+  flex-shrink:0;width:26px;height:26px;border-radius:8px;
+  background:rgba(88,166,255,0.1);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;
+}
+.card-title{
+  font-size:15px;font-weight:600;line-height:1.5;color:var(--text);
+  flex:1;
+}
+.card-source{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.source-chip{
+  display:inline-flex;align-items:center;gap:4px;
+  background:rgba(255,255,255,0.05);border:1px solid var(--border);
+  color:var(--text-muted);padding:3px 10px;border-radius:12px;
+  font-size:12px;font-weight:500;
+}
+.source-chip svg{width:11px;height:11px;flex-shrink:0;opacity:0.7}
+.card-summary{
+  font-size:13px;color:var(--text-muted);line-height:1.7;flex:1;
+}
+.card-link{
+  display:inline-flex;align-items:center;gap:5px;
+  color:var(--accent);text-decoration:none;font-size:13px;font-weight:500;
+  transition:color 0.2s;margin-top:auto;
+}
+.card-link:hover{color:var(--accent2)}
+.card-link svg{width:13px;height:13px}
+
+/* Empty Section */
+.empty-section{
+  text-align:center;padding:32px 20px;
+  color:var(--text-dim);font-size:14px;
+  background:var(--surface);border:1px dashed var(--border);border-radius:var(--radius);
+}
+
+/* Footer */
+footer{
+  border-top:1px solid var(--border);
+  padding:32px 0;text-align:center;
+}
+footer p{font-size:13px;color:var(--text-dim);margin-bottom:4px}
+footer .source-link{color:var(--accent);text-decoration:none}
+footer .source-link:hover{text-decoration:underline}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero{padding:32px 0 28px}
+  .hero h1{font-size:24px}
+  .hero-stats{gap:8px}
+  .stat-chip{padding:10px 14px;min-width:70px}
+  .stat-chip .num{font-size:20px}
+  .card-grid{grid-template-columns:1fr}
+  .anchor-nav-inner{justify-content:flex-start;overflow-x:auto;flex-wrap:nowrap;-webkit-overflow-scrolling:touch}
+  .anchor-nav a{flex-shrink:0}
+}
+@media(max-width:480px){
+  .hero h1{font-size:20px}
+  .stat-chip{min-width:60px;padding:8px 10px}
+  .stat-chip .num{font-size:18px}
+  .stat-chip .label{font-size:11px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container hero-content">
+    <div class="hero-badge"><span class="dot"></span> AI HOT 日报</div>
+    <h1>今日 AI 圈发生了什么</h1>
+    <div class="hero-date">
+      <div id="heroDate"></div>
+      <div class="window" id="heroWindow"></div>
+    </div>
+    <div class="hero-stats" id="heroStats"></div>
+  </div>
+</header>
+
+<nav class="anchor-nav">
+  <div class="container anchor-nav-inner" id="anchorNav"></div>
+</nav>
+
+<main>
+  <div class="container" id="mainContent"></div>
+</main>
+
+<footer>
+  <div class="container">
+    <p id="footerTotal"></p>
+    <p>数据来源：<a href="https://aihot.virxact.com" target="_blank" rel="noopener noreferrer" class="source-link">AI HOT (aihot.virxact.com)</a></p>
+  </div>
+</footer>
+
+<script>
+const DATA = {
+  "date": "2026-07-03",
+  "dateDisplay": "2026年7月3日（周五）",
+  "windowStart": "2026年7月2日 08:00",
+  "windowEnd": "2026年7月3日 08:00",
+  "total": 24,
+  "sections": [
+    {
+      "label": "模型发布/更新",
+      "count": 0,
+      "items": []
+    },
+    {
+      "label": "产品发布/更新",
+      "count": 7,
+      "items": [
+        {
+          "num": 1,
+          "title": "AI 版支付宝开放公测，蚂蚁阿宝无需邀请码即可体验",
+          "summary": "支付宝阿宝 AI 助手今日正式开放公测，iOS 和安卓用户可在应用商店或支付宝 App 搜索“阿宝”或“蚂蚁阿宝”直接体...",
+          "sourceUrl": "https://www.ithome.com/0/971/469.htm",
+          "sourceName": "IT之家（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr2x7ii20c2jsl8zygz5iw9n"
+        },
+        {
+          "num": 2,
+          "title": "Google Health API 推出 CLI：ghealth 是一款针对 Fitbit 数据的开源工具",
+          "summary": "ghealth 是一款封装 Google Health API v4 的开源命令行工具，以单个 Go 二进制文件发布（A...",
+          "sourceUrl": "https://www.marktechpost.com/2026/07/02/the-google-health-api-got-a-cli-ghealth-is-an-open-source-tool-for-your-fitbit-air-data",
+          "sourceName": "MarkTechPost（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3a67dj01zusly043ms4axe"
+        },
+        {
+          "num": 3,
+          "title": "Senior SWE-Bench：评估AI智能体作为高级工程师的基准测试",
+          "summary": "Senior SWE-Bench是一个开源基准测试，用于评估AI智能体完成高级软件工程师级别任务的能力。任务分功能开发与...",
+          "sourceUrl": "https://senior-swe-bench.snorkel.ai/",
+          "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+          "permalink": "https://aihot.virxact.com/items/cmr3epwmy008bsllx0y68akps"
+        },
+        {
+          "num": 4,
+          "title": "Kimi K2.7 Code 已在 GitHub Copilot 上正式发布",
+          "summary": "Kimi K2.7 Code 开源权重模型已在 GitHub Copilot 中正式可用，成为 Copilot 模型选择...",
+          "sourceUrl": "https://github.blog/changelog/2026-07-01-kimi-k2-7-is-now-available-in-github-copilot",
+          "sourceName": "Hacker News 热门（buzzing.cc 中文翻译）",
+          "permalink": "https://aihot.virxact.com/items/cmr397vx001s3sly0t7mkh3fh"
+        },
+        {
+          "num": 5,
+          "title": "阿里巴巴发布 Page Agent：开源 JavaScript 库实现网页 DOM 自然语言操控",
+          "summary": "阿里巴巴发布 Page Agent，一个开源的 JavaScript 客户端库，嵌入网页后可通过自然语言指令直接操作 D...",
+          "sourceUrl": "https://www.marktechpost.com/2026/07/02/meet-alibabas-page-agent-a-javascript-in-page-gui-agent-that-controls-web-interfaces-with-natural-language-through-the-dom",
+          "sourceName": "MarkTechPost（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3zye9z00qfslw2sg1izmks"
+        },
+        {
+          "num": 6,
+          "title": "昆仑万维天工3.2发布Skywork Tags，AI智能体加入工作群聊",
+          "summary": "昆仑万维天工3.2发布Skywork Tags，将AI智能体以团队成员身份接入Slack、飞书、钉钉、Discord、T...",
+          "sourceUrl": "https://mp.weixin.qq.com/s/OqL6ID-mAel8XN-slYgXOA",
+          "sourceName": "公众号：昆仑万维（天工）",
+          "permalink": "https://aihot.virxact.com/items/cmr2x3a7n0c0tsl8zxytx1kfx"
+        },
+        {
+          "num": 7,
+          "title": "Claude Enterprise 新增用量与成本分析及支出管控功能",
+          "summary": "Claude Enterprise 推出更丰富的管理分析工具和成本控制功能。仪表板现可按群组和用户分析用量与成本，支持按...",
+          "sourceUrl": "https://claude.com/blog/giving-admins-more-visibility-and-control-over-claude-usage-and-spend",
+          "sourceName": "Claude：Blog（网页）",
+          "permalink": "https://aihot.virxact.com/items/cmr3tce0201rwsl7lm25hjxbo"
+        }
+      ]
+    },
+    {
+      "label": "行业动态",
+      "count": 6,
+      "items": [
+        {
+          "num": 8,
+          "title": "Microsoft 成立“Frontier Company”，斥资 25 亿美元派驻 6000 名 AI 工程师到企业客户现场",
+          "summary": "Microsoft 新设业务部门“Frontier Company”，拨款 25 亿美元，将 6000 名行业与工程专家...",
+          "sourceUrl": "https://the-decoder.com/microsoft-launches-2-5-billion-frontier-company-to-embed-6000-ai-engineers-inside-enterprise-clients",
+          "sourceName": "The Decoder：AI News（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3wzycy008tslnxrw3opnfn"
+        },
+        {
+          "num": 9,
+          "title": "Anthropic与五角大楼控权之争：Claude军事用途护栏分歧",
+          "summary": "WSJ法庭文件显示，Anthropic CEO Dario Amodei与五角大楼副部长Emil Michael数月邮件...",
+          "sourceUrl": "https://x.com/kimmonismus/status/2072718147279335507",
+          "sourceName": "X：Kim (@kimmonismus)",
+          "permalink": "https://aihot.virxact.com/items/cmr3pz3hx00w5sl7lk3qk71x5"
+        },
+        {
+          "num": 10,
+          "title": "OpenAI提议美国政府持股5%估值426亿美元",
+          "summary": "据Financial Times和CNBC报道，OpenAI提议向美国政府提供公司5%的股份，按近期8520亿美元估值计...",
+          "sourceUrl": "https://x.com/testingcatalog/status/2072585845542969583",
+          "sourceName": "X：Testing Catalog (@testingcatalog)",
+          "permalink": "https://aihot.virxact.com/items/cmr37v68e01d8sly0hdur3j7r"
+        },
+        {
+          "num": 11,
+          "title": "花旗、Adobe等企业限制员工使用AI旗舰模型以控制成本",
+          "summary": "据404 Media获取的内部资料，Atlassian、Adobe、亚马逊等六家企业正限制员工使用AI工具，要求改用能力...",
+          "sourceUrl": "https://www.ithome.com/0/971/937.htm",
+          "sourceName": "IT之家（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3n0nvi006usl7l9bxrmouw"
+        },
+        {
+          "num": 12,
+          "title": "快手可灵AI获初始投资者20.28亿美元注资，投后估值180亿美元",
+          "summary": "快手在港交所公告，21名初始投资者同意以138.24亿元人民币（20.28亿美元）现金注资北京可灵，后者将持有可灵AI相...",
+          "sourceUrl": "https://www.ithome.com/0/971/954.htm",
+          "sourceName": "IT之家（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3p5u0c00qwsl7lyxbee0nd"
+        },
+        {
+          "num": 13,
+          "title": "谷歌AI建设导致2025年用电量增长37%",
+          "summary": "2025年，谷歌年度用电量同比上涨37%，创历史最大增幅。数据中心全年消耗超4200万兆瓦时，超过新西兰、丹麦、尼日利亚...",
+          "sourceUrl": "https://arstechnica.com/ai/2026/07/googles-ai-buildout-drove-37-increase-in-electricity-use-in-2025",
+          "sourceName": "Ars Technica：AI（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3fmggw00ihsllxizuvjt33"
+        }
+      ]
+    },
+    {
+      "label": "论文研究",
+      "count": 4,
+      "items": [
+        {
+          "num": 14,
+          "title": "关于Mythos和网络安全的讨论并非炒作",
+          "summary": "关于Mythos和网络安全的讨论并非炒作。 （正如任何使用Fable进行自主工作的人可能已经认识到的那样。）",
+          "sourceUrl": "https://x.com/emollick/status/2072778376494895139",
+          "sourceName": "X：Ethan Mollick (@emollick)",
+          "permalink": "https://aihot.virxact.com/items/cmr3yrwnf00e1slw21f16oh2d"
+        },
+        {
+          "num": 15,
+          "title": "多智能体团队阻碍专家发挥",
+          "summary": "在自我组织的多智能体LLM系统中，团队无法有效利用专家成员的专业知识。在多个基准测试中，即使明确告知专家身份，团队表现仍...",
+          "sourceUrl": "https://machinelearning.apple.com/research/multi-agent-teams-experts",
+          "sourceName": "Apple Machine Learning Research（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3rd0l901btsl7lars7am9q"
+        },
+        {
+          "num": 16,
+          "title": "RL微调VLM的鲁棒性与思维链一致性研究",
+          "summary": "强化学习（RL）微调被扩展至视觉语言模型（VLM）。研究发现，简单的文本扰动——误导性标题或错误思维链（CoT）——会显...",
+          "sourceUrl": "https://machinelearning.apple.com/research/robustness-chain-thought-consistency",
+          "sourceName": "Apple Machine Learning Research（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3rd0l901bwsl7ld54ejrgb"
+        },
+        {
+          "num": 17,
+          "title": "VideoFlexTok：可变长度粗到细视频分词",
+          "summary": "VideoFlexTok提出一种可变长度token序列的视频表示方法，采用粗到细结构——首个token捕捉语义和运动等抽...",
+          "sourceUrl": "https://machinelearning.apple.com/research/videoflextok",
+          "sourceName": "Apple Machine Learning Research（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3rd0l901busl7l11krygj3"
+        }
+      ]
+    },
+    {
+      "label": "技巧与观点",
+      "count": 7,
+      "items": [
+        {
+          "num": 18,
+          "title": "browser-use 发布开源 AI 视频剪辑 Skill「video-use」",
+          "summary": "browser-use 团队推出面向 Codex、Claude Code 等 AI 编码智能体的开源 Skill「vid...",
+          "sourceUrl": "https://x.com/shao__meng/status/2072644710523691110",
+          "sourceName": "X：邵猛 (@shao__meng)",
+          "permalink": "https://aihot.virxact.com/items/cmr3fluhr00i3sllxli2a5uko"
+        },
+        {
+          "num": 19,
+          "title": "Emil Kowalski 发布设计工程师 Skills，让 AI 编码工具具备 UI 动画审美",
+          "summary": "Emil Kowalski 将多年 UI/动画原则沉淀为三个 Skill，使 Codex、Claude Code、Cur...",
+          "sourceUrl": "https://x.com/shao__meng/status/2072484635955900792",
+          "sourceName": "X：邵猛 (@shao__meng)",
+          "permalink": "https://aihot.virxact.com/items/cmr2t1n9h0b18sl8zqxn9r5nu"
+        },
+        {
+          "num": 20,
+          "title": "Fable 5 在 RLI 基准中达成 16.1% 自动化率，较八个月前提升六倍",
+          "summary": "Remote Labor Index（RLI）衡量 AI 智能体完成 240 个付费自由职业项目（总值 14.4 万美元...",
+          "sourceUrl": "https://the-decoder.com/ai-agents-can-now-complete-16-percent-of-freelance-jobs-at-pro-quality-up-from-2-5-percent-eight-months-ago",
+          "sourceName": "The Decoder：AI News（RSS）",
+          "permalink": "https://aihot.virxact.com/items/cmr3hyp3j0139sllxjjc2fk8h"
+        },
+        {
+          "num": 21,
+          "title": "Fable 5 仅 4.44 美元搭建 Rube Goldberg 机器",
+          "summary": "用 Fable 5 构建的鲁布·戈德堡机械，仅需 4.44 美元 👀 提示词在此：https://www.reddit....",
+          "sourceUrl": "https://x.com/OpenRouter/status/2072738704922439689",
+          "sourceName": "X：OpenRouter (@OpenRouter)",
+          "permalink": "https://aihot.virxact.com/items/cmr3tdz1t01t0sl7lztwzlcaj"
+        },
+        {
+          "num": 22,
+          "title": "千问团队朱达：C端Agent Harness的“多快好省”工程哲学与主动服务探索",
+          "summary": "千问团队2026年1月上线通用复杂任务Agent（千问App胶囊入口），总结“多快好省”方法论：支持信息搜集、研究分析等...",
+          "sourceUrl": "https://mp.weixin.qq.com/s/l70iUM0bIpG9EdV9Px7QPQ",
+          "sourceName": "公众号：千问APP（阿里）",
+          "permalink": "https://aihot.virxact.com/items/cmr3d6uwj0074slq52bmqn20v"
+        },
+        {
+          "num": 23,
+          "title": "Agent辅助的SGLang开发：初步探索",
+          "summary": "SGLang团队将LLM服务、分布式运行时、GPU内核、扩散管道等工作流编码为可执行的SKILL.md文件、脚本、基准合...",
+          "sourceUrl": "https://www.lmsys.org/blog/2026-07-02-agent-assisted-sglang-development",
+          "sourceName": "LMSYS：Blog（Chatbot Arena 团队）",
+          "permalink": "https://aihot.virxact.com/items/cmr3uklx8008dslbrcmev44qb"
+        },
+        {
+          "num": 24,
+          "title": "借用夜晚：将闲置推理GPU回收用于研究",
+          "summary": "Runway 开发了名为 deckard 的容量控制器，在生产推理集群与研究集群间动态重分配 GPU。生产流量在北美工作...",
+          "sourceUrl": "https://runwayml.com/news/borrowing-the-night-reclaiming-idle-inference-gpus-for-research",
+          "sourceName": "Runway：News（网页）",
+          "permalink": "https://aihot.virxact.com/items/cmr41g5dr001ssln2uyz531b9"
+        }
+      ]
+    }
+  ]
+};
+
+const SECTION_ICONS = ["🧠","🚀","📰","📄","💡"];
+const SECTION_COLORS = ["c1","c2","c3","c4","c5"];
+const STAT_DOTS = ["c1","c2","c3","c4","c5"];
+
+function renderHero(){
+  document.getElementById("heroDate").textContent = DATA.dateDisplay;
+  document.getElementById("heroWindow").textContent =
+    "覆盖窗口 " + DATA.windowStart + " — " + DATA.windowEnd + " (北京时间)";
+
+  let html = "";
+  html += '<div class="stat-chip total"><span class="num">' + DATA.total + '</span><span class="label">总条数</span></div>';
+  DATA.sections.forEach(function(s, i){
+    var dotClass = STAT_DOTS[i] || "c1";
+    html += '<div class="stat-chip">' +
+      '<span class="num">' + s.count + '</span>' +
+      '<span class="label"><span class="dot dot-' + dotClass + '"></span>' + s.label + '</span>' +
+      '</div>';
+  });
+  document.getElementById("heroStats").innerHTML = html;
+}
+
+function renderNav(){
+  let html = "";
+  DATA.sections.forEach(function(s, i){
+    var id = "sec-" + i;
+    html += '<a href="#' + id + '">' + s.label +
+      '<span class="count">' + s.count + '</span></a>';
+  });
+  document.getElementById("anchorNav").innerHTML = html;
+}
+
+function renderMain(){
+  let html = "";
+  DATA.sections.forEach(function(s, i){
+    var id = "sec-" + i;
+    var colorClass = SECTION_COLORS[i] || "c1";
+    var icon = SECTION_ICONS[i] || "📌";
+    html += '<section class="section" id="' + id + '">';
+    html += '<div class="section-header">';
+    html += '<div class="section-icon icon-' + colorClass + '">' + icon + '</div>';
+    html += '<h2>' + s.label + '</h2>';
+    html += '<span class="sec-count">' + s.count + ' 条</span>';
+    html += '</div>';
+
+    if(s.items.length === 0){
+      html += '<div class="empty-section">本期暂无内容</div>';
+    } else {
+      html += '<div class="card-grid">';
+      s.items.forEach(function(item){
+        html += '<div class="card">';
+        html += '<div class="card-top">';
+        html += '<div class="card-num">' + item.num + '</div>';
+        html += '<div class="card-title">' + escapeHtml(item.title) + '</div>';
+        html += '</div>';
+        html += '<div class="card-source">';
+        html += '<span class="source-chip">' + escapeHtml(item.sourceName) + '</span>';
+        html += '</div>';
+        if(item.summary){
+          html += '<div class="card-summary">' + escapeHtml(item.summary) + '</div>';
+        }
+        if(item.sourceUrl){
+          html += '<a class="card-link" href="' + escapeAttr(item.sourceUrl) + '" target="_blank" rel="noopener noreferrer">阅读原文';
+          html += '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.75 2A1.75 1.75 0 0 0 2 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 12.25v-3.5a.75.75 0 0 0-1.5 0v3.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-8.5a.25.25 0 0 1 .25-.25h3.5a.75.75 0 0 0 0-1.5h-3.5Zm6.5-.25A.75.75 0 0 1 11 1h3.25a.75.75 0 0 1 0 1.5h-1.69l-5.97 5.97a.75.75 0 0 1-1.06-1.06L11.5 1.44v-.19Z"/></svg>';
+          html += '</a>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+    html += '</section>';
+  });
+  document.getElementById("mainContent").innerHTML = html;
+}
+
+function renderFooter(){
+  document.getElementById("footerTotal").textContent =
+    "共 " + DATA.total + " 条 AI 动态 · 五大版块全景速览";
+}
+
+function escapeHtml(str){
+  if(!str) return "";
+  return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+function escapeAttr(str){
+  if(!str) return "";
+  return str.replace(/"/g,"&quot;").replace(/'/g,"&#39;");
+}
+
+renderHero();
+renderNav();
+renderMain();
+renderFooter();
+</script>
+
+</body>
+</html>
